@@ -13,13 +13,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const WorkoutTracker = () => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
 
-  const handleToggle = () => {
-    setIsChecked(!isChecked);
+  const handleToggle1 = () => {
+    setIsChecked1(!isChecked1);
   };
   const handleToggle2 = () => {
-    setIsChecked(!isChecked);
+    setIsChecked2(!isChecked2);
   };
   return (
     <div className="w-screen  h-screen flex items-center justify-center">
@@ -33,9 +34,11 @@ const WorkoutTracker = () => {
           </div>
         </div>
         <div className=" flex  items-center">
-          <Link to="/goal"> <p className=" flex items-center justify-center mt-6 text-left h-6 w-6 rounded-md bg-slate-200 text-sm">
-            <FaChevronLeft />
-          </p>
+          <Link to="/goal">
+            {" "}
+            <p className=" flex items-center justify-center mt-6 text-left h-6 w-6 rounded-md bg-slate-200 text-sm">
+              <FaChevronLeft />
+            </p>
           </Link>
           <h1 className=" mt-5  text-xl ml-16 font-semibold ">
             Workout Tracker
@@ -83,23 +86,23 @@ const WorkoutTracker = () => {
             </div>
           </div>
 
-          <label htmlFor="toggle" className="flex items-center cursor-pointer">
+          <label htmlFor="toggle1" className="flex items-center cursor-pointer">
             <div className="relative">
               <input
-                id="toggle"
+                id="toggle1"
                 type="checkbox"
                 className="hidden"
-                checked={isChecked}
-                onChange={handleToggle}
+                checked={isChecked1}
+                onChange={handleToggle1}
               />
               <div
                 className={`toggle-line w-12 h-6 bg-blue-400 rounded-full shadow-inner ${
-                  isChecked ? "bg-green-600" : ""
+                  isChecked1 ? "bg-green-600" : ""
                 }`}
               >
                 <div
                   className={`toggle-dot absolute text-center w-5 h-5 bg-white rounded-full shadow inset-y-0 left-1 top-[1.5px] ${
-                    isChecked ? "transform translate-x-[19px]" : ""
+                    isChecked1 ? "transform translate-x-[19px]" : ""
                   }`}
                 ></div>
               </div>
@@ -120,23 +123,23 @@ const WorkoutTracker = () => {
             </div>
           </div>
 
-          <label htmlFor="toggle" className="flex items-center cursor-pointer">
+          <label htmlFor="toggle2" className="flex items-center cursor-pointer">
             <div className="relative">
               <input
-                id="toggle1"
+                id="toggle2"
                 type="checkbox"
                 className="hidden"
-                checked={isChecked}
+                checked={isChecked2}
                 onChange={handleToggle2}
               />
               <div
                 className={`toggle-line w-12 h-6 bg-blue-400 rounded-full shadow-inner ${
-                  isChecked ? "bg-green-600" : ""
+                  isChecked2 ? "bg-green-600" : ""
                 }`}
               >
                 <div
                   className={`toggle-dot absolute text-center w-5 h-5 bg-white rounded-full shadow inset-y-0 left-1 top-[1.5px] ${
-                    isChecked ? "transform translate-x-[19px]" : ""
+                    isChecked2 ? "transform translate-x-[19px]" : ""
                   }`}
                 ></div>
               </div>
@@ -165,9 +168,9 @@ const WorkoutTracker = () => {
               <RiMessengerLine />
             </div>
             <Link to="/workout-schedule">
-            <p className=" absolute left-32 -top-5 flex items-center justify-center h-14 w-14 rounded-full shadow-md bg-gradient-to-r from-blue-100 to-blue-500 text-white">
-              <CiSearch className=" text-2xl" />
-            </p>
+              <p className=" absolute left-32 -top-5 flex items-center justify-center h-14 w-14 rounded-full shadow-md bg-gradient-to-r from-blue-100 to-blue-500 text-white">
+                <CiSearch className=" text-2xl" />
+              </p>
             </Link>
 
             <div className="flex items-center gap-6 text-zinc-500 text-2xl">
