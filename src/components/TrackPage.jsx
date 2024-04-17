@@ -3,11 +3,14 @@ import { IoIosBatteryCharging } from "react-icons/io";
 import { FaWifi } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
 import { FaChevronRight } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TrackPage = () => {
+  const navigate = useNavigate()
   return (
-    <div className="w-screen h-screen flex items-center bg-slate-300 justify-center   ">
-      <div className=" w-[22rem] h-[40rem]  bg-slate-50 rounded-md ">
+    <div className="w-screen h-screen flex justify-center items-center  bg-slate-300  ">
+      <div className=" w-[22rem] h-[42rem]  bg-slate-50 rounded-md ">
         <div className=" flex items-center justify-between  w-[375px] h-[44px] px-4 ">
           <p className="">9:41</p>
           <div className="flex items-center justify-center gap-2 px-6 ">
@@ -31,12 +34,17 @@ const TrackPage = () => {
             you determine your goals and track your goals
           </p>
         </div>
-        <p className="flex items-center justify-center float-end mr-5 mt-20 w-12 h-12 text-white  bg-blue-300 rounded-full">
+        {/* <p onClick={()=>navigate('/get-burn')} className="flex items-center justify-center float-end mr-5 mt-20 w-12 h-12 text-white  bg-blue-300 rounded-full">
           <FaChevronRight />
-        </p>
+        </p> */}
+         <Link to="/get-burn" className="flex items-center justify-center float-end mr-5 mt-20 w-12 h-12 text-white bg-blue-300 rounded-full">
+          <FaChevronRight />
+        </Link>
+       
       </div>
     </div>
   );
 };
 
 export default TrackPage;
+
