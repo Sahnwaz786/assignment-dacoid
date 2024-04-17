@@ -57,7 +57,10 @@ const WorkoutTracker = () => {
               <p className="font-medium">i</p>
             </div>
           </div>
-          <img src="../public/Chart Full (2).png" alt="" />
+          <img
+            src="https://github.com/Sahnwaz786/assignment-dacoid/blob/main/public/Chart%20Full%20(2).png"
+            alt=""
+          />
         </div>
 
         <div className="alert flex items-center justify-start p-4 w-full h-14 mt-5 gap-3 rounded-lg  bg-gradient-to-r from-blue-200 to-transparent">
